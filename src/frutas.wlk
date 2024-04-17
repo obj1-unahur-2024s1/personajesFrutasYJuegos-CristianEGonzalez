@@ -1,12 +1,14 @@
 object manzana {
-	const manzanaMadura = true
+	var manzanaMadura = false
 	
 	method estaVerde() = not manzanaMadura
-
-	
 	
 	method energiaQueAporta(){
 		return if (self.estaVerde()) 7 else 14
+	}
+	
+	method madurarManzana(){
+		manzanaMadura = true
 	}
 	
 }

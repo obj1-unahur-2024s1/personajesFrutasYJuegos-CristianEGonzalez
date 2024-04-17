@@ -1,13 +1,12 @@
 object voley{
-	var tiempoDeEntrenamiento = 10
 	
-	method energiaQueDesgasta() = tiempoDeEntrenamiento * 2
+	method energiaQueDesgasta(tiempo) = tiempo * 2
 }
 
 object futbol {
 	var desgasteFisico = 10
 	
-	method energiaQueDesgasta() = desgasteFisico
+	method energiaQueDesgasta(tiempo) = desgasteFisico
 	
 	method cambiarDesgaste(gastoDeEnergia){
 		desgasteFisico = gastoDeEnergia
@@ -17,7 +16,7 @@ object futbol {
 object aerobic{
 	var temperaturaActual = 20
 	
-	method energiaQueDesgasta() = temperaturaActual
+	method energiaQueDesgasta(tiempo) = temperaturaActual
 }
 
 object basquet{
@@ -27,7 +26,7 @@ object basquet{
 		return oponentes.anyOne()
 	}
 	
-	method energiaQueDesgasta() = if ( self.unOponente().esProfesional() ) 30 else 10
+	method energiaQueDesgasta(tiempo) = if ( self.unOponente().esProfesional() ) 30 else 10
 }
 
 
