@@ -3,10 +3,8 @@ import equipo.*
 import juegos.*
 
 object martin {
-	//completar la solución
 	var energia = 0
 	var hambre = true
-	var cantActividadesRealizadas = 0
 	var frutaEnDespensa = vasoDeAgua
 	
 	method comer(fruta){
@@ -19,7 +17,8 @@ object martin {
 		frutaEnDespensa = fruta
 	}
 	
-	method entrenar(deporte){
+	//ARREGLAR
+	method entrenar(deporte,tiempo){
 		energia -= deporte.energiaQueDesgasta()
 		hambre = true
 	}
