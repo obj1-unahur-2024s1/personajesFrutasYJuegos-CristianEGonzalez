@@ -1,0 +1,11 @@
+import personajes.*
+import frutas.*
+import juegos.*
+
+test "el aerobic suma energia" {
+
+	martin.entrenar(aerobic,1)
+	
+	assert.equals(10,martin.energia())
+
+}

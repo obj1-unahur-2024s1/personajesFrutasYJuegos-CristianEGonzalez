@@ -3,20 +3,23 @@ object manzana {
 	
 	method estaVerde() = not manzanaMadura
 	
-	method energiaQueAporta(){
-		return if (self.estaVerde()) 7 else 14
-	}
+	method energiaQueAporta()=if (manzanaMadura) 14 else 7
 	
+	method estaMadura() = manzanaMadura
 	method madurarManzana(){
 		manzanaMadura = true
 	}
-	
 }
 
 object mandarina{
 	var gramos = 50
 	
-	method energiaQueAporta()= gramos * 2
+	method energiaQueAporta()= (gramos/10) * 2
+	
+	method peso() = gramos
+	method peso(grs){
+		gramos = grs
+	}
 }
 
 object banana{
