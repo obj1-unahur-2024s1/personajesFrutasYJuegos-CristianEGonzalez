@@ -1,11 +1,20 @@
 import personajes.*
 import frutas.*
 import juegos.*
+import equipo.*
 
-test "el aerobic suma energia" {
+test "el aerobic suma 10 energia cuando la energia de martin es 100" {
 
 	martin.entrenar(aerobic,1)
 	
-	assert.equals(10,martin.energia())
+	assert.equals(110,martin.energia())
 
+}
+
+test "comprobacion promedio de energia del equipo es 33.3 periodico cuando martin tiene 100 y los demas 0"{
+	assert.equals(33.33333, equipo.promEnergia())
+}
+
+test "todos los miembros del equipo son felices"{
+	assert.that(equipo.equipoFeliz())
 }
